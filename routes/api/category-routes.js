@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
 });
 
 if (!catagories) {
-  res.status(404).json({message: 'Route not found'})
+  res.status(404).json({message: 'Catagory not found'});
   return;
 };
 
@@ -60,7 +60,7 @@ router.put('/:id', async (req, res) => {
       },
     })
     if (!categories) {
-      res.status(404).json({ message: 'Route not found' });
+      res.status(404).json({ message: 'Catagory not found' });
       return;
     }
     res.status(200).json(categories);
@@ -78,7 +78,7 @@ router.delete('/:id', async (req, res) => {
       }
     });
     if (!categories) {
-      res.status(404).json({message: 'Route not found'});
+      res.status(404).json({message: 'Catagory not found'});
       return;
     }
     res.status(200).json(categories);
